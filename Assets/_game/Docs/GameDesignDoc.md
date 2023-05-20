@@ -1,0 +1,148 @@
+## Life at Pixel Farm - Game Design Document
+
+### Overview
+"Life at Pixel Farm" is a VR game that explores life in a 2D, pixelated farm setting. With the main theme being "Life in 2 Dimensions", the game uses 2D pixel art to create an immersive and interactive experience for players who view the world in 3D through their VR headsets.
+
+### Target Platform
+Virtual Reality (VR) Headsets. For the jam only the Meta Quest 2 will be supported. Other my follow if the game is a success.
+
+### Game loop
+1. hoe ground
+2. plant seeds / seedlings
+3. water plants
+4. sleep
+5. remove overgrowth 
+6. repeat 3-5 a number of times
+7. harvest
+8. profit
+9. loop
+
+### Gameplay Mechanics
+
+The expanded gameplay mechanics section details the core planting and growing crops mechanic, as well as the controller-based interaction system for grabbing crops and moving around the farm in a world without locomotion.
+
+#### Planting and Growing Crops
+1. The player starts with a small plot of land and a seed inventory.
+2. The player selects seeds from their inventory by pointing at them with their VR controller.
+3. To plant the selected seeds, players use the trigger button on their controller to grab the seed and position it over an empty tile within their plot.
+4. By releasing the trigger button, players place the chosen seed onto the designated tile.
+5. Planted seeds grow over time, progressing through several growth stages until they are ready for harvest.
+
+#### Grabbing and Harvesting Crops
+1. Players approach fully-grown crops by targeting them with their VR controller, which displays a highlighted outline around selectable objects.
+2. Once close enough to the ripe crop, players can grab it using the trigger button on their controller.
+3. Successfully harvested crops will be added to players' inventories.
+
+#### Non-Locomotive Movement
+1. To move around the farm without employing traditional locomotion mechanics, players can use their controllers to point at pre-defined areas highlighted on the ground.
+2. Upon highlighting a valid target area, players can press a designated button on their controller to smoothly transition to that location in an instant manner.
+
+These expanded mechanics establish clear guidelines for interacting with objects in "Life at Pixel Farm" using virtual reality controllers while avoiding locomotion-induced motion sickness or disorientation commonly experienced during immersive gaming sessions.
+
+#### Planting and Growing Crops
+1. The player starts with a small plot of land and a seed inventory.
+2. The player selects seeds from their inventory, which they can place on empty tiles within their plot.
+3. Planted seeds grow over time, progressing through several growth stages until they are ready for harvest.
+4. Once crops are ready, players can interact with them to harvest them and add them to their inventory.
+5. Players can sell harvested crops to earn money, which they can use to buy more seeds or expand their farm.
+
+### Art Style
+The game's art style will use flat 2D pixel art to represent all objects within the game world. Despite being displayed in 3D via VR, every element should appear as if it is made of 2D pixels when viewed. We are **not** going to use billboarding to keep the appearance as flat as possible.
+
+Below is a comprehensive list of art assets required for the first release of "Life at Pixel Farm":
+
+- Background Art
+  * Skybox (or flat background) featuring a pixelated 2D sky with clouds, sun/moon, and horizon.
+  * Distant scenery such as trees, mountains, or other environmental elements that complement the farm setting.
+
+- Farm Plot Area
+  * Empty plot tile: A textured tile representing unplanted soil.
+  * Tilled plot tile: A variation of the empty tile showing tilled soil when a seed is planted.
+
+- Crops
+  * Seed icons: Distinct pixel art illustrations of various types of seeds in the player's inventory.
+  * Crop sprites: Multiple growth stages for each crop type, from initial sprout to full ripeness.
+
+- Tools
+  * Watering can: An interactive tool for watering plants (if required).
+  * Hoe (Optional): An interactive tool for tilling soil before planting seeds.
+  * Other farming tools could be added based on future development plans.
+
+- User Interface (UI)
+  * Inventory panel: Displays available seeds and harvested crops in a visually appealing layout.
+  * Currency display: Shows the player's current balance in an easy-to-read format.
+  * Tool selection panel (Optional): Allows players to switch between different tools if needed.
+- Interaction Highlights
+  * Outline shader or highlight sprite: Indicates selectable objects when targeted with a VR controller.
+
+- Movement Markers
+  * Highlighted area markers: Visual indicators placed on predefined movement areas that help guide players' non-locomotive navigation around their farm.
+
+- Trade/Market Assets (Optional)
+  * Market stall or shop building sprite: Represents a location where players can buy seeds, sell crops or purchase tools and upgrades.
+  * UI elements such as buttons or panels to facilitate trade interactions within this system.
+
+These art assets cover all aspects of "Life at Pixel Farm" for its initial release while ensuring visual cohesion and maintaining the game's unique 2D-in-3D aesthetic style.
+
+### Sound Design
+Ambient sounds such as chirping birds or rustling leaves should accompany the visuals to enhance immersion further. Additionally, simple sound effects should play during key moments such as planting seeds or harvesting crops.
+
+### Systems
+key systems that will be necessary for implementing "Life at Pixel Farm":
+
+1. Inventory System: Manages the player's inventory of seeds and harvested crops, along with any other items or tools introduced later in development.
+2. Plot Management System: Tracks each plot tile and its current state, including what crop is planted there and its growth stage.
+3. Crop Growth System: Simulates crop growth over time by controlling the progression through various maturity stages until the crop reaches full ripeness.
+4. Currency System: Keeps track of the player's in-game currency earned through selling harvested crops or completing specific tasks (if added to the game).
+Controller Interaction System: Facilitates seamless interactions between players' VR controllers and in-game objects, such as grabbing seeds, harvesting crops, or selecting movement areas.
+5. Movement System: Provides a non-locomotive movement solution by allowing players to point their controllers at highlighted areas and instantly transition to those locations without inducing motion sickness.
+6. Trade/Market System (Optional): Allows players to sell their harvested crops or buy more seeds, tools, or other items necessary for farm management.
+These systems are essential components for building "Life at Pixel Farm" into an enjoyable VR farming simulation game while adhering to the proposed game design document.
+
+### Future Development Plans
+After the game jam submission period ends, there is potential for additional mechanics and features to be added based on player feedback and interest:
+
+- Upgrades: Players may invest in upgrades like faster-growing plants or improved tools that help manage their farm more efficiently.
+- Expansion: More plots of land may become available for purchase as players progress through the game and earn money.
+- Animal husbandry: Incorporating animals like cows and chickens could add another layer of management complexity.
+- Social interactions: Players may visit other farms created by other players or engage in trading resources.
+
+By focusing on one core mechanic during the game jam, "Life at Pixel Farm" has room to evolve into an expansive farming simulation experience set in a unique 2D/3D hybrid world.
+
+
+### One-Week Development Plan
+
+To build "Life at Pixel Farm" within a one-week timeframe, the following daily plan has been devised to maximize productivity and ensure timely completion:
+
+#### Day 1 - Initial Setup
+1. Set up the project environment in Unity or a similar game engine.
+2. Import or create basic VR assets and configure the necessary input controls for player interaction.
+3. Create placeholders for UI elements such as inventory and currency display.
+
+#### Day 2 - Art Assets
+1. Design or source pixel art assets for seeds, crops, farm plot tiles, and other essential visuals.
+2. Implement these assets into the game world to establish its overall visual style.
+
+#### Day 3 - Core Gameplay Mechanics
+1. Program the planting mechanic: allow players to select seeds from their inventory and place them onto plot tiles.
+2. Develop a system for simulating crop growth with different stages of maturity.
+
+#### Day 4 - Interaction & Harvesting
+1. Enable players to interact with fully-grown crops for harvesting purposes.
+2. Update inventory and currency systems accordingly based on harvested crops.
+
+#### Day 5 - Sound Design & Polish
+1. Create or find appropriate ambient sound effects (birds, leaves) and action sounds (planting, harvesting).
+2. Integrate these audio assets into the game world to enhance player immersion.
+3. Refine UI elements (if needed) and fix any bugs that may have emerged during development.
+
+#### Day 6 - Testing & Iteration
+1. Thoroughly playtest the game to identify potential issues with controls, visuals, audio, or gameplay mechanics.
+2. Address any discovered issues through further iteration on existing features.
+
+#### Day 7 - Final Polish & Submission
+1. Complete final testing of all aspects of "Life at Pixel Farm".
+2. Apply last-minute polish if needed based on test feedback.
+3. Compile final build of the game and submit it for consideration in the game jam event.
+
+By adhering to this detailed daily plan, "Life at Pixel Farm" will be effectively developed within one week while focusing on its core mechanic of planting and growing crops in a unique hybrid 2D/3D VR experience.
