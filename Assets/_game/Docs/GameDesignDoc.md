@@ -146,3 +146,10 @@ To build "Life at Pixel Farm" within a one-week timeframe, the following daily p
 3. Compile final build of the game and submit it for consideration in the game jam event.
 
 By adhering to this detailed daily plan, "Life at Pixel Farm" will be effectively developed within one week while focusing on its core mechanic of planting and growing crops in a unique hybrid 2D/3D VR experience.
+
+
+### CC0 Assets
+To get started quickly. These assets might be helpful and don't violate the jam rules.
+- https://opengameart.org/content/farming-set-pixel-art (cc0)
+- https://kenney.nl/assets/pixel-platformer (cc0)
+- https://cupnooble.itch.io/sprout-lands-asset-pack (credit)
