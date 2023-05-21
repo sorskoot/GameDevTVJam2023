@@ -38,10 +38,23 @@ public class CropGrowthArea : MonoBehaviour
 
     public void SetPlant()
     {
-        if (gameController.State.SelectedPlant.HasValue)
+        
+        if (this.plant != null)
         {
-            var selectedPlant = gameController.State.SelectedPlant.Value.GetComponent<Plant>();
-            this.plant = selectedPlant;
+            var currentPlant = this.plantReference.GetComponent<Plant>();
+            if(currentPlant.IsHarvestable())
+            {
+                currentPlant.HarvestCrop();
+                this.plant = null;
+            }
+        }
+        else
+        {
+            if (gameController.State.SelectedPlant.HasValue)
+            {
+                var selectedPlant = gameController.State.SelectedPlant.Value.GetComponent<Plant>();
+                this.plant = selectedPlant;
+            }
         }
     }
 }

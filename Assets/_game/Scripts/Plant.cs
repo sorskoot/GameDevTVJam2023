@@ -36,10 +36,20 @@ public class Plant : MonoBehaviour
 
     private void Grow()
     {
-        if (this.GrowthStage < this.GrowthSprites.Length)
+        if (this.GrowthStage < this.GrowthSprites.Length-1)
         {
             this.GrowthStage++;
             spriteRenderer.sprite = GrowthSprites[Mathf.Min(this.GrowthStage, this.GrowthSprites.Length-1)];
         }
+    }
+
+    public bool IsHarvestable()
+    {
+        return this.GrowthStage == this.GrowthSprites.Length-1;
+    }
+
+    public void HarvestCrop()
+    {
+
     }
 }

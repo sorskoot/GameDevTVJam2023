@@ -1,11 +1,11 @@
 # TODO
 
 Must Have:
-    ☐ GameController
+    ✔ GameController @done(23-05-21 20:25)
     Most basic game loop:
-        ☐ Plant seeds
-        ☐ Go through growth stages
-        ☐ Harvest
+        ✔ Plant seeds @done(23-05-21 20:25)
+        ✔ Go through growth stages @done(23-05-21 20:25)
+        ✔ Harvest @done(23-05-21 20:25)
 
 Should Have:
     Basic game loop:
