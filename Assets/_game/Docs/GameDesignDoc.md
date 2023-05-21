@@ -82,6 +82,23 @@ Below is a comprehensive list of art assets required for the first release of "L
   * Market stall or shop building sprite: Represents a location where players can buy seeds, sell crops or purchase tools and upgrades.
   * UI elements such as buttons or panels to facilitate trade interactions within this system.
 
+- Decorations
+  * Wooden fence
+  * Hay bale
+  * Watering can
+  * Wheelbarrow
+  * Shovel
+  * Rake
+  * Bucket
+  * Garden hoe
+  * Potted plant
+  * Ladder
+  * Sickle or scythe
+  * Garden bench or stool
+  * Birdhouse or bird feeder
+  * Mailbox (farm-style)
+  * Wagon wheel
+
 These art assets cover all aspects of "Life at Pixel Farm" for its initial release while ensuring visual cohesion and maintaining the game's unique 2D-in-3D aesthetic style.
 
 ### Sound Design

@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UniRx;
 using UnityEngine;
 
@@ -44,11 +41,6 @@ public class GameController : MonoBehaviour
     {
         State.SetDay(0);
 
-        //Scheduler.Immediate.Schedule(TimeSpan.FromSeconds(10),() =>
-        //{
-        //    State.AdvanceDay();
-        //});
-
         State.SetSelectedPlant(plants[0].gameObject);
     }
 
@@ -61,5 +53,10 @@ public class GameController : MonoBehaviour
             State.AdvanceDay();
             timer = 0;
         }
+    }
+
+    public void HarvestCrop(Plant plant)
+    {
+        Debug.Log("Plant Harvested!");
     }
 }

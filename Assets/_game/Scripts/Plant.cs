@@ -16,12 +16,15 @@ public class Plant : MonoBehaviour
     [SerializeField] private Sprite Harvest;
 
     private SpriteRenderer spriteRenderer;
+    
+    private GameController gameController;
 
     private void Start()
     {
-        spriteRenderer = this.GetComponent<SpriteRenderer>();
+        gameController = FindObjectOfType<GameController>();
 
-        var gameController = FindObjectOfType<GameController>();
+        spriteRenderer = this.GetComponent<SpriteRenderer>();
+        
         gameController.State.CurrentDay.Subscribe(OnNewDay).AddTo(this);
 
         GrowthStage = 0;
@@ -50,6 +53,6 @@ public class Plant : MonoBehaviour
 
     public void HarvestCrop()
     {
-
+        gameController.HarvestCrop(this);
     }
 }

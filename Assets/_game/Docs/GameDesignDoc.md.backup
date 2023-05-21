@@ -82,6 +82,23 @@ Below is a comprehensive list of art assets required for the first release of "L
   * Market stall or shop building sprite: Represents a location where players can buy seeds, sell crops or purchase tools and upgrades.
   * UI elements such as buttons or panels to facilitate trade interactions within this system.
 
+- Decorations
+  * Wooden fence
+  * Hay bale
+  * Watering can
+  * Wheelbarrow
+  * Shovel
+  * Rake
+  * Bucket
+  * Garden hoe
+  * Potted plant
+  * Ladder
+  * Sickle or scythe
+  * Garden bench or stool
+  * Birdhouse or bird feeder
+  * Mailbox (farm-style)
+  * Wagon wheel
+
 These art assets cover all aspects of "Life at Pixel Farm" for its initial release while ensuring visual cohesion and maintaining the game's unique 2D-in-3D aesthetic style.
 
 ### Sound Design
@@ -153,19 +170,6 @@ To build "Life at Pixel Farm" within a one-week timeframe, the following daily p
 By adhering to this detailed daily plan, "Life at Pixel Farm" will be effectively developed within one week while focusing on its core mechanic of planting and growing crops in a unique hybrid 2D/3D VR experience.
 
 
-
-Placing crops: Here's an approach on how to create an interactive system to place crops:
-
-- A. Creating crop prefabs: 
-  - i. Create empty GameObjects for each of your crop types inside your Prefabs folder. 
-  - ii. Attach each respective sprite as children of their corresponding empty GameObjects with billboard components so they always face towards camera 
-  - iii. Set their sorting layers so they appear properly when placed onto farm grid 
-- B. Placing crop prefabs using raycast interactions: 
-  - i.Create an InputManager script for handling inputs 
-  - ii.In this InputManager script, 
-    - b1. Create reference to controller inputs (SteamVR/Oculus specific) 
-    - b2. Check input events for trigger press/release 
-    - b3. On trigger press event: Shoot Raycast from controller tip position If it hits ground plane object & no other crops are present at hit location, Instantiate crop object at hit location & round hit coordinates to fit within grid alignment
 
 ### CC0 Assets
 To get started quickly. These assets might be helpful and don't violate the jam rules.
