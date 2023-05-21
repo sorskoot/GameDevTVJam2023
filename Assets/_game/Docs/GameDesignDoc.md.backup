@@ -153,6 +153,20 @@ To build "Life at Pixel Farm" within a one-week timeframe, the following daily p
 By adhering to this detailed daily plan, "Life at Pixel Farm" will be effectively developed within one week while focusing on its core mechanic of planting and growing crops in a unique hybrid 2D/3D VR experience.
 
 
+
+Placing crops: Here's an approach on how to create an interactive system to place crops:
+
+- A. Creating crop prefabs: 
+  - i. Create empty GameObjects for each of your crop types inside your Prefabs folder. 
+  - ii. Attach each respective sprite as children of their corresponding empty GameObjects with billboard components so they always face towards camera 
+  - iii. Set their sorting layers so they appear properly when placed onto farm grid 
+- B. Placing crop prefabs using raycast interactions: 
+  - i.Create an InputManager script for handling inputs 
+  - ii.In this InputManager script, 
+    - b1. Create reference to controller inputs (SteamVR/Oculus specific) 
+    - b2. Check input events for trigger press/release 
+    - b3. On trigger press event: Shoot Raycast from controller tip position If it hits ground plane object & no other crops are present at hit location, Instantiate crop object at hit location & round hit coordinates to fit within grid alignment
+
 ### CC0 Assets
 To get started quickly. These assets might be helpful and don't violate the jam rules.
 - https://opengameart.org/content/farming-set-pixel-art (cc0)
@@ -164,16 +178,3 @@ To get started quickly. These assets might be helpful and don't violate the jam 
 - [Tiles tutorials](https://imgur.com/gallery/VN8e8t7)
 - [Stardew valley crops](https://www.nicepng.com/maxp/u2w7e6u2q8t4r5e6/)
 - 
-
-
-## TODO
-
-### Must Have:
-- [ ]  Most basic game loop
-	
-
-### Should Have:
-
-### Could Have:
-
-### Would Like:
