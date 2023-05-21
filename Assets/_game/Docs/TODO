@@ -1,0 +1,29 @@
+# TODO
+
+Must Have:
+    ☐ GameController
+    Most basic game loop:
+        ☐ Plant seeds
+        ☐ Go through growth stages
+        ☐ Harvest
+
+Should Have:
+    Basic game loop:
+        ☐ Water soil
+        ☐ Water crops
+        ☐ Day Night Cycle
+
+Could Have:
+    Game loop:
+        ☐ Hoe ground
+        ☐ Remove weeds
+        ☐ Sell crops
+        ☐ Buy Seeds
+
+Would Like:
+    Advanced Game loop:
+        ☐ Fertilizer
+
+
+Out of scope:
+
