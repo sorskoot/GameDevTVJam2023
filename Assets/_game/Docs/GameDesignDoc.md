@@ -114,18 +114,19 @@ By focusing on one core mechanic during the game jam, "Life at Pixel Farm" has r
 
 To build "Life at Pixel Farm" within a one-week timeframe, the following daily plan has been devised to maximize productivity and ensure timely completion:
 
-#### Day 1 - Initial Setup
+#### Day 1 - Initial Setup [X]
 1. Set up the project environment in Unity or a similar game engine.
 2. Import or create basic VR assets and configure the necessary input controls for player interaction.
-3. Create placeholders for UI elements such as inventory and currency display.
+3. Added basic locomotion. 
+4. Established its overall visual style.
 
-#### Day 2 - Art Assets
-1. Design or source pixel art assets for seeds, crops, farm plot tiles, and other essential visuals.
-2. Implement these assets into the game world to establish its overall visual style.
-
-#### Day 3 - Core Gameplay Mechanics
-1. Program the planting mechanic: allow players to select seeds from their inventory and place them onto plot tiles.
+#### Day 2 -  Core Gameplay Mechanics
+1. Start scripting plants, soil, planting, growing and harvesting. 
 2. Develop a system for simulating crop growth with different stages of maturity.
+
+#### Day 3 - Art Assets
+1. Design more pixel art assets for seeds, crops, farm plot tiles, and other essential visuals.
+2. Program the planting mechanic: allow players to select seeds from their inventory and place them onto plot tiles.
 
 #### Day 4 - Interaction & Harvesting
 1. Enable players to interact with fully-grown crops for harvesting purposes.
@@ -145,6 +146,10 @@ To build "Life at Pixel Farm" within a one-week timeframe, the following daily p
 2. Apply last-minute polish if needed based on test feedback.
 3. Compile final build of the game and submit it for consideration in the game jam event.
 
+#### Day 8-10 - Polish
+1. Polish the game, make it look as appealing as possible
+2. Set up the Itch.io page.
+
 By adhering to this detailed daily plan, "Life at Pixel Farm" will be effectively developed within one week while focusing on its core mechanic of planting and growing crops in a unique hybrid 2D/3D VR experience.
 
 
@@ -152,4 +157,10 @@ By adhering to this detailed daily plan, "Life at Pixel Farm" will be effectivel
 To get started quickly. These assets might be helpful and don't violate the jam rules.
 - https://opengameart.org/content/farming-set-pixel-art (cc0)
 - https://kenney.nl/assets/pixel-platformer (cc0)
+- https://opengameart.org/content/farming-crops-16x16 (cc0)
 - https://cupnooble.itch.io/sprout-lands-asset-pack (credit)
+
+### Random links and stuff
+- [Tiles tutorials](https://imgur.com/gallery/VN8e8t7)
+- [Stardew valley crops](https://www.nicepng.com/maxp/u2w7e6u2q8t4r5e6/)
+- 
