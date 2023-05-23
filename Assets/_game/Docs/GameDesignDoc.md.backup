@@ -17,6 +17,42 @@ Virtual Reality (VR) Headsets. For the jam only the Meta Quest 2 will be support
 8. profit
 9. loop
 
+### Economics
+Crop and Seed Pricing
+To establish a balanced pricing system for the seed and crop yields, we must consider factors like growth time, harvest quantities, and overall demand. Here's a suggested plan for pricing:
+
+Seed Prices: 
+- Tomato seeds: $3 per seed
+- Carrot seeds: $2 per seed
+- Corn seeds: $4 per seed
+- Wheat seeds: $1 per seed
+- 
+Harvest Profit:
+- Tomatoes: $10 per harvested tomato
+- Carrots: $5 per harvested carrot
+- Corn: $15 per harvested corn stalk
+- Wheat: $3 per bundle of harvested wheat
+
+To balance the game economically, consider adjusting the growth speed of each crop.
+
+Growth Time:
+- Tomatoes: 4 days (fastest growth)
+- Carrots: 6 days
+- Corn: 8 days (slowest growth)
+- Wheat: 7 days
+- 
+By adjusting the growth speeds according to their value, you'll encourage players to strategize their planting decisions based on profit margins and growing times.
+
+Game Balance Suggestions:
+- Start players with a small amount of cash to purchase initial seeds.
+- Introduce occasional in-game events or challenges that could affect crop yields or market prices.
+- Limit the number of plots available initially; gradually expand them as players progress in the game.
+- Consider implementing seasonal changes that influence which crops can be grown at different times throughout the year.
+- Add upgrades and tools to improve efficiency, such as automated watering systems or higher-quality seeds for faster growth rates.
+
+Following these guidelines should help create an engaging and balanced experience for your players.
+
+
 ### Gameplay Mechanics
 
 The expanded gameplay mechanics section details the core planting and growing crops mechanic, as well as the controller-based interaction system for grabbing crops and moving around the farm in a world without locomotion.
@@ -127,6 +163,8 @@ After the game jam submission period ends, there is potential for additional mec
 By focusing on one core mechanic during the game jam, "Life at Pixel Farm" has room to evolve into an expansive farming simulation experience set in a unique 2D/3D hybrid world.
 
 
+
+
 ### One-Week Development Plan
 
 To build "Life at Pixel Farm" within a one-week timeframe, the following daily plan has been devised to maximize productivity and ensure timely completion:
@@ -137,7 +175,7 @@ To build "Life at Pixel Farm" within a one-week timeframe, the following daily p
 3. Added basic locomotion. 
 4. Established its overall visual style.
 
-#### Day 2 -  Core Gameplay Mechanics
+#### Day 2 -  Core Gameplay Mechanics [X]
 1. Start scripting plants, soil, planting, growing and harvesting. 
 2. Develop a system for simulating crop growth with different stages of maturity.
 

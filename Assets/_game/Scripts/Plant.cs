@@ -14,6 +14,8 @@ public class Plant : MonoBehaviour
     [SerializeField] private Sprite Seed;
 
     [SerializeField] private Sprite Harvest;
+    
+    [SerializeField] private Sprite Death;
 
     private SpriteRenderer spriteRenderer;
     
