@@ -26,7 +26,7 @@ Seed Prices:
 - Carrot seeds: $2 per seed
 - Corn seeds: $4 per seed
 - Wheat seeds: $1 per seed
-- 
+
 Harvest Profit:
 - Tomatoes: $10 per harvested tomato
 - Carrots: $5 per harvested carrot
@@ -40,7 +40,7 @@ Growth Time:
 - Carrots: 6 days
 - Corn: 8 days (slowest growth)
 - Wheat: 7 days
-- 
+ 
 By adjusting the growth speeds according to their value, you'll encourage players to strategize their planting decisions based on profit margins and growing times.
 
 Game Balance Suggestions:
@@ -179,7 +179,7 @@ To build "Life at Pixel Farm" within a one-week timeframe, the following daily p
 1. Start scripting plants, soil, planting, growing and harvesting. 
 2. Develop a system for simulating crop growth with different stages of maturity.
 
-#### Day 3 - Art Assets
+#### Day 3 - Art Assets [X]
 1. Design more pixel art assets for seeds, crops, farm plot tiles, and other essential visuals.
 2. Program the planting mechanic: allow players to select seeds from their inventory and place them onto plot tiles.
 

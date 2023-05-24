@@ -179,7 +179,7 @@ To build "Life at Pixel Farm" within a one-week timeframe, the following daily p
 1. Start scripting plants, soil, planting, growing and harvesting. 
 2. Develop a system for simulating crop growth with different stages of maturity.
 
-#### Day 3 - Art Assets
+#### Day 3 - Art Assets [X]
 1. Design more pixel art assets for seeds, crops, farm plot tiles, and other essential visuals.
 2. Program the planting mechanic: allow players to select seeds from their inventory and place them onto plot tiles.
 
