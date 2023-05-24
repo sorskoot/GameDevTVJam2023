@@ -10,13 +10,13 @@ public class CropGrowthArea : MonoBehaviour
     private bool hasPlant = false;
     private GameObject plantReference;
 
-    private GameController gameController;
+    private GameState gameState;
 
     // Start is called before the first frame update
     void Start()
     {
         hasPlant = false;
-        gameController = FindObjectOfType<GameController>();
+        gameState = FindObjectOfType<GameController>().State;
     }
 
     // Update is called once per frame
@@ -38,7 +38,6 @@ public class CropGrowthArea : MonoBehaviour
 
     public void SetPlant()
     {
-        
         if (this.plant != null)
         {
             var currentPlant = this.plantReference.GetComponent<Plant>();
@@ -46,14 +45,19 @@ public class CropGrowthArea : MonoBehaviour
             {
                 currentPlant.HarvestCrop();
                 this.plant = null;
+                FindObjectOfType<SFXController>().PlaySuccessSound();
             }
         }
         else
         {
-            if (gameController.State.SelectedPlant.HasValue)
+            if (gameState.CanPlantSelected())
             {
-                var selectedPlant = gameController.State.SelectedPlant.Value.GetComponent<Plant>();
+                var selectedPlant = gameState.SelectedPlant.Value.GetComponent<Plant>();
+                gameState.SubtractMoney(selectedPlant.Price);
                 this.plant = selectedPlant;
+            }else
+            {
+                FindObjectOfType<SFXController>().PlayFailSound();
             }
         }
     }

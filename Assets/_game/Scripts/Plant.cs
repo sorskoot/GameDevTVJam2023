@@ -17,6 +17,13 @@ public class Plant : MonoBehaviour
     
     [SerializeField] private Sprite Death;
 
+    [SerializeField] private int price;
+    [SerializeField] private int profit;
+    [SerializeField] private int growthTime; // in days
+
+    public int Profit => this.profit;
+    public int Price => this.price;
+    
     private SpriteRenderer spriteRenderer;
     
     private GameController gameController;
@@ -35,7 +42,6 @@ public class Plant : MonoBehaviour
 
     private void OnNewDay(int day)
     {
-        Debug.Log(day);
         this.Grow();
     }
 

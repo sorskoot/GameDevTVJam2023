@@ -1,30 +1,4 @@
-using UniRx;
 using UnityEngine;
-
-public class GameState
-{
-    public IReadOnlyReactiveProperty<int> CurrentDay => currentDay;
-    private readonly IReactiveProperty<int> currentDay = new ReactiveProperty<int>(0);
-
-    public IReadOnlyReactiveProperty<GameObject> SelectedPlant => selectedPlant;
-    private readonly IReactiveProperty<GameObject> selectedPlant = new ReactiveProperty<GameObject>(null);
-
-    public void SetDay(int day)
-    {
-        currentDay.Value = day;
-    }
-
-    public void AdvanceDay()
-    {
-        currentDay.Value++;
-    }
-
-    public void SetSelectedPlant(GameObject plant)
-    {
-        selectedPlant.Value = plant;
-    }
-
-}
 
 public class GameController : MonoBehaviour
 {
@@ -39,7 +13,7 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        State.SetDay(0);
+        State.Reset();
 
         State.SetSelectedPlant(plants[0].gameObject);
     }
@@ -57,6 +31,6 @@ public class GameController : MonoBehaviour
 
     public void HarvestCrop(Plant plant)
     {
-        Debug.Log("Plant Harvested!");
+        State.AddMoney(plant.Profit);
     }
 }

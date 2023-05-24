@@ -106,3 +106,6 @@ MonoBehaviour:
   Seed: {fileID: 21300000, guid: f8e17fe04212cc145b759a985498a25d, type: 3}
   Harvest: {fileID: 21300000, guid: 8847e88d7d4269c46955a5f2985f5325, type: 3}
   Death: {fileID: 21300000, guid: a6392db78770a7443aea1fe9eed691f3, type: 3}
+  price: 1
+  profit: 3
+  growthTime: 7
