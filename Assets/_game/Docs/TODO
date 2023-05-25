@@ -9,14 +9,15 @@ Must Have:
 
 Should Have:
     Basic game loop:
+        ☐ Hoe ground
+        ☐ Remove weeds
         ☐ Water soil
         ☐ Water crops
         ☐ Day Night Cycle
 
 Could Have:
     Game loop:
-        ☐ Hoe ground
-        ☐ Remove weeds
+
         ☐ Sell crops
         ☐ Buy Seeds
 

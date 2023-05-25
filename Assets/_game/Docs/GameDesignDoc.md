@@ -183,25 +183,32 @@ To build "Life at Pixel Farm" within a one-week timeframe, the following daily p
 1. Design more pixel art assets for seeds, crops, farm plot tiles, and other essential visuals.
 2. Program the planting mechanic: allow players to select seeds from their inventory and place them onto plot tiles.
 
-#### Day 4 - Interaction & Harvesting
+#### Day 4 - Interaction & Harvesting [X]
 1. Enable players to interact with fully-grown crops for harvesting purposes.
 2. Update inventory and currency systems accordingly based on harvested crops.
 
-#### Day 5 - Sound Design & Polish
+#### Day 5 - 
+1. Show the selected seed in right hand
+2. Select Hoe, Rake or watering can
+3. Implement Hoe, Rake and watering can
+4. Day/Night Cycle 
+5. Make plants grow according to day/night cycle
+
+#### Day 6 - Sound Design & Polish
 1. Create or find appropriate ambient sound effects (birds, leaves) and action sounds (planting, harvesting).
 2. Integrate these audio assets into the game world to enhance player immersion.
 3. Refine UI elements (if needed) and fix any bugs that may have emerged during development.
 
-#### Day 6 - Testing & Iteration
+#### Day 7 - Testing & Iteration
 1. Thoroughly playtest the game to identify potential issues with controls, visuals, audio, or gameplay mechanics.
 2. Address any discovered issues through further iteration on existing features.
 
-#### Day 7 - Final Polish & Submission
+#### Day 8 - Final Polish & Submission
 1. Complete final testing of all aspects of "Life at Pixel Farm".
 2. Apply last-minute polish if needed based on test feedback.
 3. Compile final build of the game and submit it for consideration in the game jam event.
 
-#### Day 8-10 - Polish
+#### Day 9-10 - Polish
 1. Polish the game, make it look as appealing as possible
 2. Set up the Itch.io page.
 
