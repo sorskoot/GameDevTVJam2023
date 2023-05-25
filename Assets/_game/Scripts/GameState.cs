@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using UniRx;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class GameState
@@ -12,6 +13,8 @@ public class GameState
 
     public IReadOnlyReactiveProperty<int> Balance => balance;
     private readonly IReactiveProperty<int> balance = new ReactiveProperty<int>(0);
+    public IReadOnlyReactiveProperty<Tool> SelectedTool => selectedTool;
+    private readonly IReactiveProperty<Tool> selectedTool = new ReactiveProperty<Tool>(Tool.None);
 
     public void SetDay(int day)
     {
@@ -25,6 +28,11 @@ public class GameState
 
     public void SetSelectedPlant(GameObject plant)
     {
+        if (plant != null)
+        {
+            selectedTool.Value = Tool.None;
+        }
+
         selectedPlant.Value = plant;
     }
 
@@ -46,7 +54,19 @@ public class GameState
 
     public bool CanPlantSelected()
     {
-        return this.SelectedPlant.HasValue && 
+        return this.selectedPlant != null &&
+               this.SelectedPlant.HasValue && 
                this.Balance.Value >= this.SelectedPlant.Value.GetComponent<Plant>().Price;
+    }
+
+    public void SetSelectedTool(Tool tool)
+    {
+        if (tool != Tool.None)
+        {
+            selectedPlant.Value = null;
+        }
+
+        selectedTool.Value = tool;
+
     }
 }

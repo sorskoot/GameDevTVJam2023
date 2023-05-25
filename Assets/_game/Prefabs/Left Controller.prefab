@@ -39,6 +39,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7279104170626037332}
     m_Modifications:
+    - target: {fileID: 1313026435319465088, guid: 39c890d6f3b73b74f8a788cb6d3f42ce,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6338314785229553432}
+    - target: {fileID: 1313026435319465088, guid: 39c890d6f3b73b74f8a788cb6d3f42ce,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSelection
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313026435319465088, guid: 39c890d6f3b73b74f8a788cb6d3f42ce,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ToolSelectionController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5692121175841261734, guid: 39c890d6f3b73b74f8a788cb6d3f42ce,
         type: 3}
       propertyPath: m_Name
@@ -57,12 +72,12 @@ PrefabInstance:
     - target: {fileID: 6628035353223126035, guid: 39c890d6f3b73b74f8a788cb6d3f42ce,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.017
       objectReference: {fileID: 0}
     - target: {fileID: 6628035353223126035, guid: 39c890d6f3b73b74f8a788cb6d3f42ce,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 6628035353223126035, guid: 39c890d6f3b73b74f8a788cb6d3f42ce,
         type: 3}
@@ -99,11 +114,98 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6840730096993679896, guid: 39c890d6f3b73b74f8a788cb6d3f42ce,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 274587857742458875}
+    - target: {fileID: 6840730096993679896, guid: 39c890d6f3b73b74f8a788cb6d3f42ce,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSelection
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840730096993679896, guid: 39c890d6f3b73b74f8a788cb6d3f42ce,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ToolSelectionController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123188275608308648, guid: 39c890d6f3b73b74f8a788cb6d3f42ce,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1733036330110682612}
+    - target: {fileID: 7123188275608308648, guid: 39c890d6f3b73b74f8a788cb6d3f42ce,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSelection
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123188275608308648, guid: 39c890d6f3b73b74f8a788cb6d3f42ce,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ToolSelectionController, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39c890d6f3b73b74f8a788cb6d3f42ce, type: 3}
+--- !u!1 &1225753287566014255 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6840730096993679898, guid: 39c890d6f3b73b74f8a788cb6d3f42ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 5759514419482725685}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &274587857742458875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225753287566014255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db8a30fa7428124a833fe5d66f9d729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toolSelection: 3
 --- !u!4 &1447455175292375334 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6628035353223126035, guid: 39c890d6f3b73b74f8a788cb6d3f42ce,
     type: 3}
   m_PrefabInstance: {fileID: 5759514419482725685}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3258145588547307167 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7123188275608308650, guid: 39c890d6f3b73b74f8a788cb6d3f42ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 5759514419482725685}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1733036330110682612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3258145588547307167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db8a30fa7428124a833fe5d66f9d729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toolSelection: 2
+--- !u!1 &6761355836958181815 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1313026435319465090, guid: 39c890d6f3b73b74f8a788cb6d3f42ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 5759514419482725685}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6338314785229553432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6761355836958181815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db8a30fa7428124a833fe5d66f9d729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toolSelection: 1
