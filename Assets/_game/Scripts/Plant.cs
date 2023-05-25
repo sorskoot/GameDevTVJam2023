@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UniRx;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 
 [RequireComponent(typeof(SpriteRenderer))]
@@ -11,7 +12,7 @@ public class Plant : MonoBehaviour
 
     [SerializeField] private Sprite[] GrowthSprites;
 
-    [SerializeField] private Sprite Seed;
+    [SerializeField] private Sprite seed;
 
     [SerializeField] private Sprite Harvest;
     
@@ -23,6 +24,7 @@ public class Plant : MonoBehaviour
 
     public int Profit => this.profit;
     public int Price => this.price;
+    public Sprite Seed => this.seed;
     
     private SpriteRenderer spriteRenderer;
     

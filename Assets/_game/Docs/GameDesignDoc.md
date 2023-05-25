@@ -187,7 +187,7 @@ To build "Life at Pixel Farm" within a one-week timeframe, the following daily p
 1. Enable players to interact with fully-grown crops for harvesting purposes.
 2. Update inventory and currency systems accordingly based on harvested crops.
 
-#### Day 5 - 
+#### Day 5 - Day and Night
 1. Show the selected seed in right hand
 2. Select Hoe, Rake or watering can
 3. Implement Hoe, Rake and watering can

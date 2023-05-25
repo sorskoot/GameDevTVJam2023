@@ -103,7 +103,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7d3d181d0a068b54485e670c784bc4e4, type: 3}
   - {fileID: 21300000, guid: cfbaecf4c46444b49a96d77114ef7de9, type: 3}
   - {fileID: 21300000, guid: c63c5941af4d4f74c9cdecb7ff7a39a9, type: 3}
-  Seed: {fileID: 21300000, guid: 83d5e5ee4fa461e4a858757634be00d5, type: 3}
+  seed: {fileID: 21300000, guid: 83d5e5ee4fa461e4a858757634be00d5, type: 3}
   Harvest: {fileID: 21300000, guid: e73d4ac15f2889f4b9f1948a02dcfa87, type: 3}
   Death: {fileID: 21300000, guid: e6bd5692e2ccc214ea4b1f0f4556db27, type: 3}
   price: 4
