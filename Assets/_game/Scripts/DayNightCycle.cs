@@ -9,8 +9,12 @@ public class DayNightCycle : MonoBehaviour
     private Light sun;
     private float rotationSpeed;
 
+    private GameState gameState;
+
     void Start()
     {
+        this.gameState = FindObjectOfType<GameController>().State;
+
         sun = GetComponent<Light>();
         rotationSpeed = 360f / dayDuration;
 
@@ -21,15 +25,27 @@ public class DayNightCycle : MonoBehaviour
         }
     }
 
+    private float time = 0;
     void Update()
     {
         // Rotate the sun based on time elapsed
         float angle = Time.deltaTime * rotationSpeed;
+
+        time += angle;
+        if(time >= 360f)
+        {
+            time -= 360f;
+            gameState.AdvanceDay();
+        }
+
         sun.transform.Rotate(new Vector3(angle, 0, 0));
 
         // Adjust intensity for nighttime
         float currentSunElevation = sun.transform.eulerAngles.x;
-
+        //if (previous % 360f > currentSunElevation % 360f)
+        //{
+        //    gameState.AdvanceDay();
+        //}
         // Adjust intensity for nighttime and update Skybox exposure
         if (currentSunElevation >= 180)
         {

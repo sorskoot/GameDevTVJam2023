@@ -17,9 +17,8 @@ Should Have:
 
 Could Have:
     Game loop:
-
-        ☐ Sell crops
-        ☐ Buy Seeds
+        ✔ Sell crops @done(23-05-26 12:52)
+        ✔ Buy Seeds @done(23-05-26 12:52)
 
 Would Like:
     Advanced Game loop:

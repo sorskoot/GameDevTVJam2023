@@ -2,6 +2,7 @@ using System.Diagnostics;
 using UniRx;
 using UnityEditor.Tilemaps;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class GameState
 {
@@ -24,6 +25,7 @@ public class GameState
     public void AdvanceDay()
     {
         currentDay.Value++;
+        Debug.Log(currentDay.Value);
     }
 
     public void SetSelectedPlant(GameObject plant)
