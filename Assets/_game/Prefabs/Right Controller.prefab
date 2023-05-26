@@ -125,7 +125,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2050459695509236387}
-  - component: {fileID: 8333997149996425173}
   - component: {fileID: 1140814708465761397}
   m_Layer: 0
   m_Name: Selected Items
@@ -153,22 +152,6 @@ Transform:
   m_Father: {fileID: 3475118261464492563}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -60, y: 0, z: 0}
---- !u!114 &8333997149996425173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8509401011017257306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0425041689cbb4468d99401f6d5f9a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedSeed: {fileID: 0}
-  Hoe: {fileID: 0}
-  Rake: {fileID: 0}
-  WateringCan: {fileID: 0}
 --- !u!114 &1140814708465761397
 MonoBehaviour:
   m_ObjectHideFlags: 0
