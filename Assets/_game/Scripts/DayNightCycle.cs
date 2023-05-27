@@ -6,6 +6,9 @@ public class DayNightCycle : MonoBehaviour
     [SerializeField] private float dayDuration = 30f; // Duration of a full day cycle (day + night) in seconds
     [SerializeField] private Material skyboxMaterial;
 
+    [SerializeField] private AudioSource birds;
+    [SerializeField] private AudioSource crickets;
+
     private Light sun;
     private float rotationSpeed;
 
@@ -46,6 +49,9 @@ public class DayNightCycle : MonoBehaviour
         // Adjust intensity for nighttime and update Skybox exposure
         if (currentSunElevation >= 180)
         {
+            crickets.volume = Mathf.Lerp(crickets.volume, 1f, Time.deltaTime);
+            birds.volume = Mathf.Lerp(birds.volume, 0f, Time.deltaTime);
+
             // Nighttime: reduce intensity so that it's dark but still visible.
             sun.intensity = Mathf.Lerp(sun.intensity, 0.1f, Time.deltaTime);
 
@@ -56,6 +62,9 @@ public class DayNightCycle : MonoBehaviour
         }
         else
         {
+            crickets.volume = Mathf.Lerp(crickets.volume, 0f, Time.deltaTime);
+            birds.volume = Mathf.Lerp(birds.volume, 1f, Time.deltaTime);
+
             // Daytime: restore the original intensity.
             sun.intensity = Mathf.Lerp(sun.intensity, 1f, Time.deltaTime);
             RenderSettings.ambientIntensity = Mathf.Lerp(RenderSettings.ambientIntensity, 1f, Time.deltaTime);
