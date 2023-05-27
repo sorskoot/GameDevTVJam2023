@@ -42,10 +42,7 @@ public class DayNightCycle : MonoBehaviour
 
         // Adjust intensity for nighttime
         float currentSunElevation = sun.transform.eulerAngles.x;
-        //if (previous % 360f > currentSunElevation % 360f)
-        //{
-        //    gameState.AdvanceDay();
-        //}
+        
         // Adjust intensity for nighttime and update Skybox exposure
         if (currentSunElevation >= 180)
         {

@@ -1,6 +1,4 @@
-using System.Diagnostics;
 using UniRx;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
@@ -56,8 +54,12 @@ public class GameState
 
     public bool CanPlantSelected()
     {
-        return this.selectedPlant != null &&
-               this.SelectedPlant.HasValue && 
+        if (this.selectedPlant == null || this.selectedPlant.Value==null) 
+        {
+            return false;
+        }
+
+        return this.SelectedPlant.HasValue && 
                this.Balance.Value >= this.SelectedPlant.Value.GetComponent<Plant>().Price;
     }
 

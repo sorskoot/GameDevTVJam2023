@@ -193,23 +193,28 @@ To build "Life at Pixel Farm" within a one-week timeframe, the following daily p
 3. Day/Night Cycle 
 
 
-#### Day 6 - Sound Design & Polish
+#### Day 6 - Sound Design & Polish [X]
 1. Implement Hoe, Rake and watering can
 1. Make plants grow according to day/night cycle
+
+#### Day 7 - Finalizing main game loop
+1. Finish the growing of plants according to the data
+1. make them die off and become worthless if they don't get water.
+1. Make soil degrade over time
+
+#### Day 8
 1. Create or find appropriate ambient sound effects (birds, leaves) and action sounds (planting, harvesting).
 1. Integrate these audio assets into the game world to enhance player immersion.
 1. Refine UI elements (if needed) and fix any bugs that may have emerged during development.
-
-#### Day 7 - Testing & Iteration
 1. Thoroughly playtest the game to identify potential issues with controls, visuals, audio, or gameplay mechanics.
-2. Address any discovered issues through further iteration on existing features.
+1. Address any discovered issues through further iteration on existing features.
 
-#### Day 8 - Final Polish & Submission
+#### Day 9 - Final Polish & Submission
 1. Complete final testing of all aspects of "Life at Pixel Farm".
 2. Apply last-minute polish if needed based on test feedback.
 3. Compile final build of the game and submit it for consideration in the game jam event.
 
-#### Day 9-10 - Polish
+#### Day 10 - Polish
 1. Polish the game, make it look as appealing as possible
 2. Set up the Itch.io page.
 
