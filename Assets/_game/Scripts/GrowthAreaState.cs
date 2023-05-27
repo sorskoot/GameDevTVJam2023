@@ -34,6 +34,10 @@ public class GrowthAreaState : IDisposable
             else if (currentSoil.Value == Soil.Dirt)
             {
                 currentSoil.Value = Soil.Grass;
+                if (currentPlant.Value != null)
+                {
+                    currentPlant.Value.KillPlant();
+                }
             }
 
         }

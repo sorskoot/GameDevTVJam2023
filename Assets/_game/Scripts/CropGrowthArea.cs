@@ -77,6 +77,12 @@ public class CropGrowthArea : MonoBehaviour
 
     public void SetPlant()
     {
+        if (gameState.SelectedTool.Value == Tool.WateringCan && growthAreaState.CurrentSoil.Value == Soil.Dirt)
+        {
+            growthAreaState.Water();
+            return;
+        }
+
         if (hasPlant)
         {
             var currentPlant = this.growthAreaState.GetPlant();
@@ -107,14 +113,6 @@ public class CropGrowthArea : MonoBehaviour
                 return;
             }
 
-            if (gameState.SelectedTool.Value == Tool.WateringCan && growthAreaState.CurrentSoil.Value == Soil.Dirt)
-            {
-                growthAreaState.Water();
-                return;
-            }
-
-            
-
             if (gameState.CanPlantSelected() && growthAreaState.CurrentSoil.Value == Soil.Wet)
             {
                 var selectedPlant = gameState.SelectedPlant.Value.GetComponent<Plant>();
@@ -122,7 +120,6 @@ public class CropGrowthArea : MonoBehaviour
                 this.plant = selectedPlant;
                 return;
             }
-
 
             FindObjectOfType<SFXController>().PlayFailSound();
 

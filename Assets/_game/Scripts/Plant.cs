@@ -50,18 +50,22 @@ public class Plant : MonoBehaviour
         spriteRenderer.sprite = GrowthSprites[this.GrowthStage];
 
         isHarvestable = false;
+        isDead = false;
     }
 
 
     private void OnNewDay(int day)
     {
+        if (isDead)
+        {
+            return;
+        }
+
         int growingInDays = day - dayPlanted;
 
         if (growingInDays > this.growthTime + 2)
         {
-            spriteRenderer.sprite = Death;
-            isHarvestable = false;
-            isDead = true;
+            KillPlant();
             return;
         }
 
@@ -99,5 +103,12 @@ public class Plant : MonoBehaviour
     public void DestroyPlant()
     {
         Destroy(this.gameObject);
+    }
+
+    public void KillPlant()
+    {
+        spriteRenderer.sprite = Death;
+        isHarvestable = false;
+        isDead = true;
     }
 }
