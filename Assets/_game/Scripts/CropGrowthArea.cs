@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UniRx;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CropGrowthArea : MonoBehaviour
@@ -22,7 +23,7 @@ public class CropGrowthArea : MonoBehaviour
     private Sprite wetDirt;
 
     private bool hasPlant = false;
-    private GameObject plantReference;
+    //private GameObject plantReference;
 
     private GameState gameState;
     private GrowthAreaState growthAreaState;
@@ -62,28 +63,40 @@ public class CropGrowthArea : MonoBehaviour
     {
         if (plant != null && !hasPlant)
         {
-            plantReference = Instantiate(plant.gameObject, gameObject.transform);
+            var plantObject = Instantiate(plant.gameObject, gameObject.transform);
+            this.growthAreaState.Plant(plantObject.GetComponent<Plant>());
             hasPlant = true;
         }
 
         if (plant == null && hasPlant)
         {
-
-            Destroy(plantReference);
+            this.growthAreaState.RemovePlant();
             hasPlant = false;
         }
     }
 
     public void SetPlant()
     {
-        if (this.plant != null)
+        if (hasPlant)
         {
-            var currentPlant = this.plantReference.GetComponent<Plant>();
+            var currentPlant = this.growthAreaState.GetPlant();
             if (currentPlant.IsHarvestable())
             {
+                hasPlant = false;
+                plant = null;
                 currentPlant.HarvestCrop();
-                this.plant = null;
+                this.growthAreaState.RemovePlant();
                 FindObjectOfType<SFXController>().PlaySuccessSound();
+            }
+
+            if (gameState.SelectedTool.Value == Tool.Rake)
+            {
+                if (currentPlant.IsDead())
+                {
+                    hasPlant = false;
+                    plant = null;
+                    this.growthAreaState.RemovePlant();
+                }
             }
         }
         else
@@ -100,6 +113,7 @@ public class CropGrowthArea : MonoBehaviour
                 return;
             }
 
+            
 
             if (gameState.CanPlantSelected() && growthAreaState.CurrentSoil.Value == Soil.Wet)
             {

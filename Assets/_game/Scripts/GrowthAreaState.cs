@@ -1,13 +1,19 @@
 using System;
 using UniRx;
+using UnityEngine;
 
 public class GrowthAreaState : IDisposable
 {
     private readonly CompositeDisposable subscriptionTracker = new CompositeDisposable();
 
     private readonly GameState gameState;
+    
     public IReadOnlyReactiveProperty<Soil> CurrentSoil => currentSoil;
     private readonly IReactiveProperty<Soil> currentSoil = new ReactiveProperty<Soil>(Soil.Grass);
+
+    public IReadOnlyReactiveProperty<Plant> CurrentPlant => currentPlant;
+    private readonly IReactiveProperty<Plant> currentPlant = new ReactiveProperty<Plant>(null);
+
 
     private int LastDayWithAction = -1;
 
@@ -34,6 +40,19 @@ public class GrowthAreaState : IDisposable
 
     }
 
+    public void Plant(Plant plant)
+    {
+        if (currentSoil.Value == Soil.Wet)
+        {
+            currentPlant.Value = plant;
+        }
+    }
+
+    public void RemovePlant()
+    {
+        currentPlant.Value.DestroyPlant();
+    }
+
     public void Hoe()
     {
         LastDayWithAction = gameState.CurrentDay.Value;
@@ -57,5 +76,10 @@ public class GrowthAreaState : IDisposable
     public void Dispose()
     {
         subscriptionTracker.Dispose();
+    }
+
+    public Plant GetPlant()
+    {
+        return currentPlant?.Value.GetComponent<Plant>();
     }
 }

@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UniRx;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -26,9 +28,14 @@ public class Plant : MonoBehaviour
     public int Price => this.price;
     public Sprite Seed => this.seed;
     
+
     private SpriteRenderer spriteRenderer;
     
     private GameController gameController;
+    private int dayPlanted;
+    private bool isHarvestable = false;
+    private bool isDead = false;
+
 
     private void Start()
     {
@@ -37,32 +44,60 @@ public class Plant : MonoBehaviour
         spriteRenderer = this.GetComponent<SpriteRenderer>();
         
         gameController.State.CurrentDay.Subscribe(OnNewDay).AddTo(this);
+        this.dayPlanted = gameController.State.CurrentDay.Value;
 
         GrowthStage = 0;
         spriteRenderer.sprite = GrowthSprites[this.GrowthStage];
+
+        isHarvestable = false;
     }
+
 
     private void OnNewDay(int day)
     {
-        this.Grow();
+        int growingInDays = day - dayPlanted;
+
+        if (growingInDays > this.growthTime + 2)
+        {
+            spriteRenderer.sprite = Death;
+            isHarvestable = false;
+            isDead = true;
+            return;
+        }
+
+        if (growingInDays >= this.growthTime)
+        {
+            spriteRenderer.sprite = this.GrowthSprites[3];
+            isHarvestable = true;
+            return;
+        }
+
+        // Have the plant grow in stages. Have 1 sprite for every stage. There are 3 stages.
+        if (growingInDays > 0)
+        {
+            // calculate the stage of the plant
+            int stage = (int) Math.Floor(growingInDays / (double) growthTime * 3);
+            spriteRenderer.sprite = this.GrowthSprites[stage];
+        }
     }
 
-    private void Grow()
+    public bool IsDead()
     {
-        if (this.GrowthStage < this.GrowthSprites.Length-1)
-        {
-            this.GrowthStage++;
-            spriteRenderer.sprite = GrowthSprites[Mathf.Min(this.GrowthStage, this.GrowthSprites.Length-1)];
-        }
+        return isDead;
     }
 
     public bool IsHarvestable()
     {
-        return this.GrowthStage == this.GrowthSprites.Length-1;
+        return isHarvestable;
     }
 
     public void HarvestCrop()
     {
         gameController.HarvestCrop(this);
+    }
+
+    public void DestroyPlant()
+    {
+        Destroy(this.gameObject);
     }
 }
