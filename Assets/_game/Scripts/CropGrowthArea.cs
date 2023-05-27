@@ -80,6 +80,7 @@ public class CropGrowthArea : MonoBehaviour
         if (gameState.SelectedTool.Value == Tool.WateringCan && growthAreaState.CurrentSoil.Value == Soil.Dirt)
         {
             growthAreaState.Water();
+            FindObjectOfType<SFXController>().PlayWateringCan();
             return;
         }
 
@@ -92,7 +93,7 @@ public class CropGrowthArea : MonoBehaviour
                 plant = null;
                 currentPlant.HarvestCrop();
                 this.growthAreaState.RemovePlant();
-                FindObjectOfType<SFXController>().PlaySuccessSound();
+                FindObjectOfType<SFXController>().PlayHarvest();
             }
 
             if (gameState.SelectedTool.Value == Tool.Rake)
@@ -102,6 +103,7 @@ public class CropGrowthArea : MonoBehaviour
                     hasPlant = false;
                     plant = null;
                     this.growthAreaState.RemovePlant();
+                    FindObjectOfType<SFXController>().PlayRake();
                 }
             }
         }
@@ -110,6 +112,7 @@ public class CropGrowthArea : MonoBehaviour
             if (gameState.SelectedTool.Value == Tool.Hoe && growthAreaState.CurrentSoil.Value == Soil.Grass)
             {
                 growthAreaState.Hoe();
+                FindObjectOfType<SFXController>().PlayHoe();
                 return;
             }
 
@@ -117,6 +120,7 @@ public class CropGrowthArea : MonoBehaviour
             {
                 var selectedPlant = gameState.SelectedPlant.Value.GetComponent<Plant>();
                 gameState.SubtractMoney(selectedPlant.Price);
+                FindObjectOfType<SFXController>().PlayPlant();
                 this.plant = selectedPlant;
                 return;
             }
