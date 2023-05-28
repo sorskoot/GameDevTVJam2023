@@ -6,12 +6,12 @@ Must Have:
         ✔ Plant seeds @done(23-05-21 20:25)
         ✔ Go through growth stages @done(23-05-21 20:25)
         ✔ Harvest @done(23-05-21 20:25)
-    ☐ Animation on harvest
+    ✔ Animation on harvest @done(23-05-28 20:15)
 
 Should Have:
     ✔ Show effect when watering crops and soil @done(23-05-28 19:28)
     ☐ Show effect when tilling ground
-    ☐ Make it more clear which tool is selected
+    ✔ Make it more clear which tool is selected @done(23-05-28 22:29)
     ☐ Highlight crop area for action
     Basic game loop:
         ✔ Hoe ground @done(23-05-28 18:56)
