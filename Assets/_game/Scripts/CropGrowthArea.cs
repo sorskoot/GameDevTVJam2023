@@ -1,32 +1,27 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UniRx;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class CropGrowthArea : MonoBehaviour
 {
-    [SerializeField]
-    private Plant plant;
-
-    [SerializeField]
-    private SpriteRenderer soil;
-
-    [SerializeField]
-    private Sprite grass;
-
-    [SerializeField]
-    private Sprite dirt;
-
-    [SerializeField]
-    private Sprite wetDirt;
-
-    private bool hasPlant = false;
+    [SerializeField] private Sprite dirt;
     //private GameObject plantReference;
 
     private GameState gameState;
+
+    [SerializeField] private Sprite grass;
+
     private GrowthAreaState growthAreaState;
+
+    private bool hasPlant = false;
+
+    [SerializeField] private Plant plant;
+
+    [SerializeField] private SpriteRenderer soil;
+
+    [SerializeField] private GameObject SplashEffect;
+
+    [SerializeField] private Sprite wetDirt;
 
     // Start is called before the first frame update
     void Start()
@@ -34,10 +29,9 @@ public class CropGrowthArea : MonoBehaviour
         hasPlant = false;
         gameState = FindObjectOfType<GameController>().State;
         growthAreaState = new GrowthAreaState(gameState);
-        this.soil.sprite = grass;
+        soil.sprite = grass;
 
         growthAreaState.CurrentSoil.Subscribe(OnSoilChanged).AddTo(this);
-
     }
 
     private void OnSoilChanged(Soil soil)
@@ -64,35 +58,45 @@ public class CropGrowthArea : MonoBehaviour
         if (plant != null && !hasPlant)
         {
             var plantObject = Instantiate(plant.gameObject, gameObject.transform);
-            this.growthAreaState.Plant(plantObject.GetComponent<Plant>());
+            growthAreaState.Plant(plantObject.GetComponent<Plant>());
             hasPlant = true;
         }
 
         if (plant == null && hasPlant)
         {
-            this.growthAreaState.RemovePlant();
+            growthAreaState.RemovePlant();
             hasPlant = false;
         }
     }
 
     public void SetPlant()
     {
-        if (gameState.SelectedTool.Value == Tool.WateringCan && growthAreaState.CurrentSoil.Value == Soil.Dirt)
-        {
-            growthAreaState.Water();
-            FindObjectOfType<SFXController>().PlayWateringCan();
-            return;
-        }
+        Plant currentPlant = null;
 
         if (hasPlant)
         {
-            var currentPlant = this.growthAreaState.GetPlant();
+            currentPlant = growthAreaState.GetPlant();
+        }
+
+        if (gameState.SelectedTool.Value == Tool.WateringCan
+            && growthAreaState.CurrentSoil.Value == Soil.Dirt
+            && !(currentPlant != null && currentPlant.IsHarvestable()))
+        {
+            growthAreaState.Water();
+            FindObjectOfType<SFXController>().PlayWateringCan();
+            var splash = Instantiate(SplashEffect, transform.position, Quaternion.identity);
+            splash.transform.Rotate(0, 90, 0);
+            return;
+        }
+
+        if (hasPlant && currentPlant != null)
+        {
             if (currentPlant.IsHarvestable())
             {
                 hasPlant = false;
                 plant = null;
                 currentPlant.HarvestCrop();
-                this.growthAreaState.RemovePlant();
+                growthAreaState.RemovePlant();
                 FindObjectOfType<SFXController>().PlayHarvest();
             }
 
@@ -102,7 +106,7 @@ public class CropGrowthArea : MonoBehaviour
                 {
                     hasPlant = false;
                     plant = null;
-                    this.growthAreaState.RemovePlant();
+                    growthAreaState.RemovePlant();
                     FindObjectOfType<SFXController>().PlayRake();
                 }
             }
@@ -121,12 +125,11 @@ public class CropGrowthArea : MonoBehaviour
                 var selectedPlant = gameState.SelectedPlant.Value.GetComponent<Plant>();
                 gameState.SubtractMoney(selectedPlant.Price);
                 FindObjectOfType<SFXController>().PlayPlant();
-                this.plant = selectedPlant;
+                plant = selectedPlant;
                 return;
             }
 
             FindObjectOfType<SFXController>().PlayFailSound();
-
         }
     }
 

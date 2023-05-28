@@ -65,6 +65,8 @@ MonoBehaviour:
   grass: {fileID: 21300000, guid: c063cf272035bc34b895d8d3d35245b4, type: 3}
   dirt: {fileID: 21300000, guid: 12f15021af1513b41919732ed78eb02b, type: 3}
   wetDirt: {fileID: 21300000, guid: aa29cb919b0367b40b570e86d6242d04, type: 3}
+  SplashEffect: {fileID: 2901850971390193011, guid: 999878db180f4f14585ccc57da6c5c74,
+    type: 3}
 --- !u!114 &6038225554364769639
 MonoBehaviour:
   m_ObjectHideFlags: 0

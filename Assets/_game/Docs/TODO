@@ -6,16 +6,25 @@ Must Have:
         ✔ Plant seeds @done(23-05-21 20:25)
         ✔ Go through growth stages @done(23-05-21 20:25)
         ✔ Harvest @done(23-05-21 20:25)
+    ☐ Animation on harvest
 
 Should Have:
+    ✔ Show effect when watering crops and soil @done(23-05-28 19:28)
+    ☐ Show effect when tilling ground
+    ☐ Make it more clear which tool is selected
+    ☐ Highlight crop area for action
     Basic game loop:
-        ☐ Hoe ground
+        ✔ Hoe ground @done(23-05-28 18:56)
         ☐ Remove weeds
-        ☐ Water soil
-        ☐ Water crops
-        ☐ Day Night Cycle
+        ✔ Water soil @done(23-05-28 18:56)
+        ✔ Water crops @done(23-05-28 18:56)
+        ✔ Day Night Cycle @done(23-05-28 18:56)
 
 Could Have:
+    ☐ Preview crop to be planted 
+    ☐ Improve UI of menu
+    ☐ Customize teleport
+    ☐ Correct pixel size for watering animation
     Game loop:
         ✔ Sell crops @done(23-05-26 12:52)
         ✔ Buy Seeds @done(23-05-26 12:52)
