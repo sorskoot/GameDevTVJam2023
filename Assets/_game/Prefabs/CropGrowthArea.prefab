@@ -60,13 +60,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0020f6c21cc0b4591f7b0c3f92cbfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dirt: {fileID: 21300000, guid: 12f15021af1513b41919732ed78eb02b, type: 3}
+  grass: {fileID: 21300000, guid: c063cf272035bc34b895d8d3d35245b4, type: 3}
   plant: {fileID: 0}
   soil: {fileID: 6707436348937825751}
-  grass: {fileID: 21300000, guid: c063cf272035bc34b895d8d3d35245b4, type: 3}
-  dirt: {fileID: 21300000, guid: 12f15021af1513b41919732ed78eb02b, type: 3}
-  wetDirt: {fileID: 21300000, guid: aa29cb919b0367b40b570e86d6242d04, type: 3}
   SplashEffect: {fileID: 2901850971390193011, guid: 999878db180f4f14585ccc57da6c5c74,
     type: 3}
+  HarvestEffect: {fileID: 5604703520101277935, guid: 4a621b2ab08fd2c4ead68b13d4e834af,
+    type: 3}
+  wetDirt: {fileID: 21300000, guid: aa29cb919b0367b40b570e86d6242d04, type: 3}
 --- !u!114 &6038225554364769639
 MonoBehaviour:
   m_ObjectHideFlags: 0

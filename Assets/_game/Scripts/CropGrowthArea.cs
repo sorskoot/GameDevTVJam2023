@@ -1,6 +1,7 @@
 using System;
 using UniRx;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class CropGrowthArea : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class CropGrowthArea : MonoBehaviour
     [SerializeField] private SpriteRenderer soil;
 
     [SerializeField] private GameObject SplashEffect;
+    [SerializeField] private GameObject HarvestEffect;
 
     [SerializeField] private Sprite wetDirt;
 
@@ -80,23 +82,30 @@ public class CropGrowthArea : MonoBehaviour
 
         if (gameState.SelectedTool.Value == Tool.WateringCan
             && growthAreaState.CurrentSoil.Value == Soil.Dirt
-            && !(currentPlant != null && currentPlant.IsHarvestable()))
+            )
         {
-            growthAreaState.Water();
-            FindObjectOfType<SFXController>().PlayWateringCan();
-            var splash = Instantiate(SplashEffect, transform.position, Quaternion.identity);
-            splash.transform.Rotate(0, 90, 0);
-            return;
+            if (currentPlant == null || !currentPlant.IsHarvestable())
+            {
+                growthAreaState.Water();
+                FindObjectOfType<SFXController>().PlayWateringCan();
+                var splash = Instantiate(SplashEffect, transform.position, Quaternion.identity);
+                splash.transform.Rotate(0, 90, 0);
+                return;
+            }
         }
 
         if (hasPlant && currentPlant != null)
         {
             if (currentPlant.IsHarvestable())
             {
+                var harvest = Instantiate(HarvestEffect, transform.position, Quaternion.identity);
+                harvest.GetComponentInChildren<SpriteRenderer>().sprite = currentPlant.HarvestSprite;
+
                 hasPlant = false;
                 plant = null;
                 currentPlant.HarvestCrop();
                 growthAreaState.RemovePlant();
+
                 FindObjectOfType<SFXController>().PlayHarvest();
             }
 

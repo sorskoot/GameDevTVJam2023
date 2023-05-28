@@ -27,7 +27,7 @@ public class Plant : MonoBehaviour
     public int Profit => this.profit;
     public int Price => this.price;
     public Sprite Seed => this.seed;
-    
+    public Sprite HarvestSprite => this.Harvest;
 
     private SpriteRenderer spriteRenderer;
     
