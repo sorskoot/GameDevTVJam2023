@@ -39,6 +39,7 @@ public class DayNightCycle : MonoBehaviour
         {
             time -= 360f;
             gameState.AdvanceDay();
+            FindObjectOfType<SFXController>().PlayRooster();
         }
 
         sun.transform.Rotate(new Vector3(angle, 0, 0));

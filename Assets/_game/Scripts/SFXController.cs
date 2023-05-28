@@ -9,6 +9,7 @@ public class SFXController : MonoBehaviour
     [SerializeField] private AudioClip plant;
     [SerializeField] private AudioClip rake;
     [SerializeField] private AudioClip wateringCan;
+    [SerializeField] private AudioClip rooster;
 
     private AudioSource audioSource;
 
@@ -47,6 +48,11 @@ public class SFXController : MonoBehaviour
     public void PlayWateringCan()
     {
         audioSource.PlayOneShot(wateringCan);
+    }
+
+    public void PlayRooster()
+    {
+        audioSource.PlayOneShot(rooster);
     }
 
 }
