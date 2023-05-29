@@ -1,6 +1,8 @@
 # TODO
 
 Must Have:
+    ☐ Trailer on YouTube
+    
     ✔ GameController @done(23-05-21 20:25)
     Most basic game loop:
         ✔ Plant seeds @done(23-05-21 20:25)
@@ -12,7 +14,7 @@ Should Have:
     ✔ Show effect when watering crops and soil @done(23-05-28 19:28)
     ☐ Show effect when tilling ground
     ✔ Make it more clear which tool is selected @done(23-05-28 22:29)
-    ☐ Highlight crop area for action
+    ✔ Highlight crop area for action @done(23-05-29 20:16)
     Basic game loop:
         ✔ Hoe ground @done(23-05-28 18:56)
         ☐ Remove weeds
@@ -21,10 +23,12 @@ Should Have:
         ✔ Day Night Cycle @done(23-05-28 18:56)
 
 Could Have:
-    ☐ Preview crop to be planted 
+    ☐ Title 'Screen'. Just show the title for 5 seconds when game starts
+    ✔ Preview crop to be planted @done(23-05-29 20:16)
     ☐ Improve UI of menu
-    ☐ Customize teleport
+    ✔ Customize teleport @done(23-05-29 19:00)
     ☐ Correct pixel size for watering animation
+    ☐ Show Current Day in left controller menu
     Game loop:
         ✔ Sell crops @done(23-05-26 12:52)
         ✔ Buy Seeds @done(23-05-26 12:52)
